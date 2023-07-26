@@ -2,7 +2,7 @@ spring:
   datasource:
     username: ${MYSQL_USER:root}
     password: ${MYSQL_PASSWORD:Welcome}
-    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/testdb
+    url: jdbc:mysql://${MYSQL_HOST:mysqldb}:${MYSQL_PORT:3306}/testdb
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     show-sql: true
