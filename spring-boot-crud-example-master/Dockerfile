@@ -2,7 +2,7 @@
 FROM openjdk:17-oracle
 
 # Make port 8080 available to the world outside this container
-EXPOSE 8080
+#EXPOSE 8080
 
 ADD target/spring-boot-crud-mysql.jar spring-boot-crud-mysql.jar
 
