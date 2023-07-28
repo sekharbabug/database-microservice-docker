@@ -12,6 +12,8 @@ services:
 
   mysqldb:
     image: mysql:latest
+    ports :
+      - "3306:3306"
     networks:
       - organization-mysql
     environment:
