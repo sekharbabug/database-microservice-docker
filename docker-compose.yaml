@@ -12,8 +12,10 @@ services:
 
   mysqldb:
     image: mysql:latest
+    voulmes :
+        - mysql-voulme:/var/lib/mysql
     ports :
-      - "3306:3306"
+      - "127.0.0.1:3306:3306"
     networks:
       - organization-mysql
     environment:
