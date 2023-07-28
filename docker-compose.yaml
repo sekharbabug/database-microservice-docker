@@ -15,7 +15,7 @@ services:
     voulmes :
         - mysql-voulme:/var/lib/mysql
     ports :
-      - "127.0.0.1:3306:3306"
+      - "3306:3306"
     networks:
       - organization-mysql
     environment:
