@@ -1,6 +1,6 @@
 version: "3"
 services:
-  organization:
+  dockerintegraation:
 #    image: organization-service
     build: ./spring-boot-crud-example-master
     ports:
