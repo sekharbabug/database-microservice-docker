@@ -1,7 +1,7 @@
 spring:
   datasource:
-    username: ${MYSQL_USER}
-    password: ${MYSQL_ROOT_PASSWORD}
+    username: ${MYSQL_USER:root}
+    password: ${MYSQL_ROOT_PASSWORD:test}
     url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT}/${MYSQL_DATABASE}?useSSL=false&allowPublicKeyRetrieval=true
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
