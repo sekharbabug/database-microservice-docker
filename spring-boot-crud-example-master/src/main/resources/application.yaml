@@ -1,8 +1,8 @@
 spring:
   datasource:
     username: root
-    password: Welcome@#$99
-    url: jdbc:mysql://localhost:3306/dockerdb?useSSL=false&allowPublicKeyRetrieval=true
+    password: root
+    url: jdbc:mysql://mysqldb:3306/dockerdb?useSSL=false&allowPublicKeyRetrieval=true
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     show-sql: true
