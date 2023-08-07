@@ -21,7 +21,7 @@ services:
       - organization-mysql
     environment:
       - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=organizationdb
+      - MYSQL_DATABASE=dockerdb
 
 networks:
   organization-mysql:
