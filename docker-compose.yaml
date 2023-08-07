@@ -32,4 +32,4 @@ services:
       - MYSQL_DATABASE=dockerdb
 
 networks:
-  organization-mysql: mysqlconnect
+  organization-mysql:
