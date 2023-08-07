@@ -6,7 +6,7 @@ services:
     image: dockermysqlintegration:1.0
     container_name: "dockermysqlintegration"    
     ports:
-      - "8083:8083"
+      - 8083:8083
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=dockerdb
@@ -22,7 +22,7 @@ services:
     image: mysql:latest    
     container_name: mysqldb
     ports :
-      - "3306:3306"
+      - 3307:3306
     networks:
       - organization-mysql
     environment:
