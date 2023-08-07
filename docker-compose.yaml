@@ -2,7 +2,8 @@ version: "3"
 services:
   dockerintegraation:
 #    image: organization-service
-    build: ./spring-boot-crud-example-master    
+    build: ./spring-boot-crud-example-master
+    image: dockermysqlintegration:1.0
     container_name: "dockermysqlintegration"    
     ports:
       - "8083:8083"
