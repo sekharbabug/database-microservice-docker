@@ -16,7 +16,7 @@ services:
       - MYSQL_USER=root
     networks:
       - organization-mysql
-    depends_on:
+    links:
       - mysqldb
 
   mysqldb:
