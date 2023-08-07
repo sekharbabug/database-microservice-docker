@@ -4,7 +4,8 @@ services:
 #    image: organization-service
     build: ./spring-boot-crud-example-master
     image: dockermysqlintegration:1.0
-    container_name: "dockermysqlintegration"    
+    container_name: "dockermysqlintegration"
+    restart : always
     ports:
       - 8083:8083
     environment:
