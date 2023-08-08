@@ -1,5 +1,20 @@
 version: "3"
 services:
+
+mysqldb:
+    image: mysql:latest    
+    container_name: mysqldb
+    # voulme : /var/mysql/backupdata
+    ports :
+      - "3307:3306"
+    networks:
+      - organization-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=dockerdb
+
+
+
   dockerintegraation:
 #    image: organization-service
     build: ./spring-boot-crud-example-master
@@ -18,17 +33,7 @@ services:
       - organization-mysql
     links:
       - mysqldb
-mysqldb:
-    image: mysql:latest    
-    container_name: mysqldb
-    # voulme : /var/mysql/backupdata
-    ports :
-      - "3307:3306"
-    networks:
-      - organization-mysql
-    environment:
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=dockerdb
+
 
 networks:
   organization-mysql:
