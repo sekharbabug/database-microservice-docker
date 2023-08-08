@@ -1,18 +1,23 @@
 version: "3"
 services:
 
-mysqldb:
-    image: mysql:latest    
+  mysqldb:
+    image: mysql:latest
     container_name: mysqldb
     # voulme : /var/mysql/backupdata
-    ports :
-      - "3307:3306"
+    ports:
+      - "3306:3306"
+    expose:
+      - 3306
     networks:
       - organization-mysql
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=dockerdb
-
+    healthcheck:
+        test: ["CMD","mysqladmin","ping","-h","localhost"]
+        timeout: 20s
+        retries: 10
 
 
   dockerintegraation:
@@ -20,7 +25,7 @@ mysqldb:
     build: ./spring-boot-crud-example-master
     image: dockermysqlintegration:1.0
     container_name: "dockermysqlintegration"
-    restart : always
+    restart: always
     ports:
       - "8083:8083"
     environment:
@@ -31,8 +36,9 @@ mysqldb:
       - MYSQL_USER=root
     networks:
       - organization-mysql
-    links:
-      - mysqldb
+    depends_on:
+      mysqldb:
+              condition: service_healthy
 
 
 networks:
