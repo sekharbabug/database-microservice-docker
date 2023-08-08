@@ -7,7 +7,7 @@ services:
     container_name: "dockermysqlintegration"
     restart : always
     ports:
-      - 8083:8083
+      - "8083:8083"
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=dockerdb
@@ -23,7 +23,7 @@ mysqldb:
     container_name: mysqldb
     # voulme : /var/mysql/backupdata
     ports :
-      - 3307:3306
+      - "3307:3306"
     networks:
       - organization-mysql
     environment:
