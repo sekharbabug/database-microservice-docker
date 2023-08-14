@@ -14,10 +14,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=dockerdb
-    healthcheck:
-        test: ["CMD","mysqladmin","ping","-h","localhost"]
-        timeout: 20s
-        retries: 10
+    
 
 
   dockerintegraation:
@@ -38,15 +35,7 @@ services:
       - organization-mysql
     depends_on:
       mysqldb:
-    entrypoint:
-      [
-        "/app/wait-for.sh",
-        "postgres:5432",
-        "--",
-        "/app/start.sh"
-      ]
-    command: [ "/app/main" ]
-              condition: service_healthy
+    
 
 
 networks:
