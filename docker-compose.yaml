@@ -9,8 +9,7 @@ services:
       - "3306:3306"
     expose:
       - 3306
-    networks:
-      - organization-mysql
+    # networks:- organization-mysql
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=dockerdb
@@ -31,8 +30,7 @@ services:
       - MYSQL_PORT=3036
       - MYSQL_HOST=mysqldb
       - MYSQL_USER=root
-    networks:
-      - organization-mysql
+    # networks:- organization-mysql
     links:
       - mysqldb
     # depends_on:
