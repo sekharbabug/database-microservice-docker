@@ -81,7 +81,7 @@
 						<version>3.3.2</version>
 						<configuration>
 							<to>
-								<image>piomin/${project.artifactId}:${project.version}</image>
+								<image>dbintegration/${project.artifactId}:${project.version}</image>
 							</to>
 						</configuration>
 						<executions>
